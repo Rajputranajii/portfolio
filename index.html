@@ -15,7 +15,7 @@
 
         body {
             background-color: rgb(0, 0, 33);
-            color: wheat;
+            color: #eccfff;
             font-family: 'poppings', sans-serif;
         }
 
@@ -75,8 +75,24 @@
 
         }
 
+
         .leftSection {
             font-size: 2rem;
+
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
 
         }
 
@@ -136,14 +152,114 @@
             width: 30%;
 
         }
+
         .leftSection3 {
-            font-size: 2rem;
+            font-size: 1.5rem;
 
         }
 
         .rightSection3 img {
             width: 122%;
             margin: 0px 5px;
+        }
+
+        .container {
+            min-height: 90vh;
+            background: #08071d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("bg.png") no-repeat center center/cover;
+        }
+
+        .container form {
+            width: 670px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            flex-wrap: wrap;
+        }
+
+        .container form h1 {
+            color: #fff;
+            font-weight: 500;
+            margin-top: 20px;
+            width: 500px;
+            text-align: center;
+        }
+
+        .container form input {
+            width: 290px;
+            height: 40px;
+            padding-left: 10px;
+            outline: none;
+            border: none;
+            font-size: 15px;
+            margin-bottom: 10px;
+            background: none;
+            border-bottom: 2px solid #fff;
+        }
+
+        .container form input::placeholder {
+            color: #ddd;
+        }
+
+        .container form #lastName,
+        .container form #mobile {
+            margin-left: 20px;
+        }
+
+        .container form h4 {
+            color: #fff;
+            font-weight: 300;
+            width: 600px;
+            margin-top: 20px;
+        }
+
+        .container form textarea {
+            background: none;
+            border: none;
+            border-bottom: 2px solid #fff;
+            color: #fff;
+            font-weight: 200;
+            font-size: 15px;
+            padding: 10px;
+            outline: none;
+            min-width: 600px;
+            max-width: 600px;
+            min-height: 80px;
+            max-height: 80px;
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 1em;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background-color: rgba(194, 194, 194, 0.713);
+        }
+
+        .container form #button {
+            border: none;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 20px;
+            color: #333;
+            width: 100px;
+            padding: 0;
+            margin-right: 500px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .container form #button:hover {
+            opacity: 0.7;
         }
     </style>
 </head>
@@ -157,7 +273,7 @@
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Project">Project</a></li>
-                    <li><a href="/">Contact</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -166,54 +282,99 @@
         <section class="firstSection" id="home">
             <div class="leftSection">
                 Hi, My name is <span class="purple"> Rishav Rana</span>
-                <div>and I am a passionate</div>
-                <span id="element"></span>
+                <div>and I am a passionate</div><span id="element"></span>
+                <div class="buttons">
+                    <button
+                        onclick="document.location='https://drive.google.com/file/d/1yFfNSJb6-6oMCul_uNKiGZSLR7-F2tss/view?usp=sharing' "
+                        class="btn">Download CV</button>
+                    <button onclick="document.location='https://github.com/Rajputranajii' " class="btn">Github </button>
+                </div>
+
             </div>
             <div class="rightSection">
                 <img src=".//img/PngItem_1127587.png" alt="">
             </div>
 
         </section>
-        <hr >
-        <section  id="About">
-        <center>
-            <h1 style=" font-size: 2rem; margin-top: 4%;">About Me</h1>
-        </center>
-        <div class="secondSection">
-            <div class="leftSection1">
-                Hi,I'm <span class="purple"> Rishav Rana </span>and I'm a <span id="element2"></span>
-                <div style="margin-top: 10px;
-                font-size:2rem ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident facere mollitia,
-                    quia quod maxime dolore deserunt nesciunt deleniti necessitatibus exercitationem ipsum corporis
-                    consectetur animi quaerat quas iste atque repudiandae eligendi.</div>
+        <hr>
+        <section id="About">
+            <center>
+                <h1 style=" font-size: 2rem; margin-top: 4%;">About Me</h1>
+            </center>
+            <div class="secondSection">
+                <div class="leftSection1">
 
+
+                    <div style="margin-top: 10px;
+                font-size:1.5rem ;"> My name is <span class="purple">Rishav Rana</span>, and I am a dedicated
+                        individual who has successfully completed a <span class="purple"> Diploma in Computer Science
+                            Engineering .</span> I am currently pursuing a <span class="purple"> Bachelor of Technology
+                            (B.Tech) degree </span>, striving to further enhance my knowledge and skills in the field of
+                        technology. My academic journey has equipped me with a solid foundation in CSE, enabling me to
+                        understand and apply concepts related to </span><span id="element2"></span></div>
+
+                </div>
+                <div class="rightSection2">
+                    <img src="./img/img2_edited.png" alt="">
+                </div>
             </div>
-            <div class="rightSection2">
-                <img src="./img/img2_edited.png" alt="">
-            </div>
-        </div>
         </section>
         <hr style="margin-top: 0rem">
-        <section  id="Project">
-        <center>
-            <h1 style="margin: 0 50px; font-size: 2rem;">Project</h1>
-        </center>
-        <div class="thirdsection">
+        <section id="Project">
+            <center>
+                <h1 style="margin: 0 50px; font-size: 2rem;">Project</h1>
+            </center>
+            <div class="thirdsection">
 
-            <div class="leftSection3">
-                <div style="margin-top: 10px;
-                font-size:2rem ;">
-                Hlo Everyone 
-                    quia quod maxime dolore deserunt nesciunt deleniti necessitatibus exercitationem ipsum corporis
-                    consectetur animi quaerat quas iste atque repudiandae eligendi.</div>
+                <div class="leftSection3">
+                    <div style="margin-top: 10px;
+                font-size:1.5rem ;">
+                        During the final year of my diploma in Computer Science and Engineering, I undertook an engaging
+                        and rewarding project that involved the creation of a comprehensive tourism website. This
+                        website was dedicated to showcasing the top 10 tourist destinations across India. The project
+                        allowed me to merge my technical skills with my passion for travel and exploration. Through
+                        careful research and design, I curated a platform that provided detailed information about each
+                        of the chosen destinations, including their cultural significance, historical landmarks, natural
+                        beauty, and local attractions.</div>
 
+                </div>
+                <div class="rightSection3">
+                    <img src="./img/shan-elahi-DDiLYt_F88w-unsplash.jpg" alt="">
+                </div>
             </div>
-            <div class="rightSection3">
-                <img src="./img/shan-elahi-DDiLYt_F88w-unsplash.jpg" alt="">
-            </div>
-        </div>
         </section>
-        <hr>
+
+        </section>
+        <hr style="margin-top: 0rem">
+
+        <section id="Contact">
+            <!-- <div class="fourthsection " > -->
+            <!-- <div class="leftSection4">
+            <div style="margin-top: 10px;
+            font-size:2rem ;">
+            </div> -->
+            <div class="container">
+                <form>
+                    <h1>Contact Me</h1>
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="mobile" placeholder="Mobile" required>
+                    <h4>Type Your Message Here...</h4>
+                    <textarea required></textarea>
+                    <input type="submit" value="Send" id="button">
+                </form>
+            </div>
+
+            </div>
+            <div class="rightSection4">
+
+            </div>
+            </div>
+        </section>
+        <hr style="padding-bottom: 1px;
+        margin-bottom: 5px;">
+
 
     </main>
 
@@ -226,8 +387,8 @@
     </script>
     <script>
         var typed = new Typed('#element2', {
-            strings: ['Video Editor....', 'Web Developer'],
-            typeSpeed: 50,
+            strings: ['computer systems', 'software development', 'and', 'problem-solving .', 'Throughout my studies'],
+            typeSpeed: 100,
         });
     </script>
     <script src="./javascript.js" />
